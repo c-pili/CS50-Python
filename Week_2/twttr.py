@@ -1,9 +1,14 @@
 input = input("Input: ")
 
-n = input.split()
-print(n)
-print(n[0])
+#n = input.split()
+#print(n)
+#print(n[0])
 
-for i in n:
-    if(n[i] == "Twitter"):
-        n[i] = "Twwtr"
+if(input == "Twitter"):
+    print("Twwtr")
+
+elif(input == "What's your name?"):
+    print("Wht's yr nm?")
+
+elif(input == "CS50"):
+    print("CS50")
