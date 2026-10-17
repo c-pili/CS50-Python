@@ -1,26 +1,31 @@
-file = input("File name: ").lower().
+file = input("File name: ").lower()
+
+name, file = file.split(".")
 
 match file:
-    case ".gif":
+    case "gif":
         print("image/gif")
 
-    case ".jpg":
+    case "jpg":
         print("image/jpeg")
 
-    case ".jpeg":
+    case "jpeg":
         print("image/jpeg")
 
-    case ".png":
+    case "png":
         print("image/png")
 
-    case ".pdf":
+    case "pdf":
         print("application/pdf")
 
-    case ".txt":
-        print("application/txt")
+    case "txt":
+        print("text/plain")
 
-    case ".zip":
+    case "zip":
         print("application/zip")
+
+    case "bin":
+        print("application/octet-stream")
 
 
 

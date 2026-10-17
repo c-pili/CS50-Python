@@ -1,12 +1,17 @@
 item = input("Item: ").lower()
 
-print("Calories: ", end="")
 match item:
     case "apple":
-        print("130")
+        print("Calories: 130")
 
     case "avocado":
-        print("50")
+        print("Calories: 50")
 
-    case "Sweet Cherries":
-        print("100")
+    case "sweet cherries":
+        print("Calories: 100")
+
+    case "kiwifruit":
+        print("Calories: 90")
+
+    case "pear":
+        print("Calories: 100")

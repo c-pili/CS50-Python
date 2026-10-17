@@ -1,21 +1,23 @@
-from asyncio.windows_events import NULL
-
 while True:
     fraction = input("Fraction: ")
 
     try:
         x, z = fraction.split("/")
         fraction = int((int(x)/int(z))*100)
-        if(fraction == 100):
-            print("F")
-
-        elif(fraction == 0):
-            print("E")
+        if(float(x) <= 0 or fraction > 100):
+            x = 0
 
         else:
-            print(fraction,"%", sep="")
+            if(fraction == 100):
+                print("F")
 
-        break
+            elif(fraction == 0):
+                print("E")
 
-    except ValueError:
-        fraction = NULL
+            else:
+                print(fraction,"%", sep="")
+
+            break
+
+    except (ValueError, ZeroDivisionError):
+        fraction = "0"
