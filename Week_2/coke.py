@@ -1,18 +1,14 @@
+def VerifCoin(coin):
+    return int(coin) in [25, 10, 5]
+
+
 amount = 50
 
-while(amount > 0):
-    print("Amount Due: ", amount)
+while amount > 0:
+    print("Amount Due:", amount)
     coin = input("Insert Coin: ")
-    bool = VerifCoin(coin)
-    if(bool == True):
-        amount -= coin
-    else:
-        print("Invalid Coin")
 
+    if VerifCoin(coin):
+        amount -= int(coin)
 
-
-def VerifCoin(n):
-    if((n == 25) or (n == 10) or (n == 5)):
-        return True
-    else:
-        return False
+print("Change Owed:", abs(amount))
