@@ -1,2 +1,2 @@
-words = input()
-print(f"words")
+words = input().split(" ")
+print(words, sep="...")
