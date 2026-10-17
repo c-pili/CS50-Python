@@ -1,2 +1,3 @@
-words = input().split(" ")
-print(words, sep="...")
+words = input()
+
+print(words.replace(" ", "..."))
